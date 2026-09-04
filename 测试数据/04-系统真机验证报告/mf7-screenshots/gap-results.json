@@ -1,0 +1,22 @@
+[
+  {
+    "name": "BKT 热力图 42 KP",
+    "pass": true,
+    "note": "kp-cell=54 平均掌握度=True θ=True"
+  },
+  {
+    "name": "学情环形图",
+    "pass": true,
+    "note": "svg_circles=2 四域=True"
+  },
+  {
+    "name": "溯源链哈希验证徽章",
+    "pass": true,
+    "note": "badges=6 文本含哈希验证=True"
+  },
+  {
+    "name": "移动端统一布局 (不分端)",
+    "pass": true,
+    "note": "menuBtn=True 初始收起=True 展开=True 遮罩=True 点击后收起=True"
+  }
+]

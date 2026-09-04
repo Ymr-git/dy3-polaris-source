@@ -1,0 +1,42 @@
+[
+  {
+    "name": "安全网关拦截无 token 写端点",
+    "pass": true,
+    "note": "401 code=-32201"
+  },
+  {
+    "name": "带 token 写端点通过",
+    "pass": true,
+    "note": "mode=guide"
+  },
+  {
+    "name": "只读端点公开",
+    "pass": true,
+    "note": "kp-catalog 200"
+  },
+  {
+    "name": "幂等键同键去重",
+    "pass": true,
+    "note": "code=-32300"
+  },
+  {
+    "name": "fact-check 领域标准值生效",
+    "pass": true,
+    "note": "assertions=1"
+  },
+  {
+    "name": "health 真实探活全层 healthy",
+    "pass": true,
+    "note": "l3=entities=0"
+  },
+  {
+    "name": "契约信封错误带 trace_id",
+    "pass": true,
+    "note": "code=-32300 trace一致"
+  },
+  {
+    "name": "前端答疑正常 (登录态)",
+    "pass": true,
+    "note": "多智能体应答"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "系统总览健康卡片",
+    "pass": true,
+    "note": "文本: 'Dashboard\\n\\nRole: student'",
+    "screenshot": "01-overview-health.png"
+  },
+  {
+    "name": "BKT 热力图 (42 KP)",
+    "pass": false,
+    "note": "文本: 'KP'",
+    "screenshot": "02-bkt-heatmap.png"
+  },
+  {
+    "name": "学情面板掌握度环形图",
+    "pass": false,
+    "note": "文本: 'Learn\\n\\nLogin needed'",
+    "screenshot": "03-learn-ring.png"
+  },
+  {
+    "name": "知识问答 + Agent 流水线",
+    "pass": true,
+    "note": "文本: 'Query'",
+    "screenshot": "04-query-pipeline.png"
+  },
+  {
+    "name": "辩论可视化 (时间线+收敛+裁决)",
+    "pass": true,
+    "note": "文本: '辩论实时面板\\n\\n议题：量子效率提升路径\\n\\n裁决完成\\n发言时间线 (2)\\nA1\\n支持\\n主张基于量子点浓度调节提升效率\\nA2\\n反对\\n质疑成本与稳'",
+    "screenshot": "05-debate-panel.png"
+  },
+  {
+    "name": "知识库实体列表",
+    "pass": true,
+    "note": "文本: '知识库管理\\n实体总数\\n3\\n图谱规则\\n三元组\\n质检平均分\\n实体列表 (0)\\nID\\t名称\\t类型\\t领域\\t状态\\t创建时间\\n知识库'",
+    "screenshot": "06-kb-entities.png"
+  },
+  {
+    "name": "溯源链哈希验证徽章",
+    "pass": false,
+    "note": "UI 未实装溯源徽章 (M-F4 仅治理可视化, 溯源渲染器未接入)",
+    "screenshot": ""
+  },
+  {
+    "name": "会话管理页",
+    "pass": true,
+    "note": "文本: '会话管理\\n+新建会话\\nID\\t类型\\t状态\\t创建时间\\t操作\\nsess-192e4c1266d3\\t学情诊断\\t进行中\\t58566'",
+    "screenshot": "07-sessions.png"
+  },
+  {
+    "name": "审计日志表格 (API 侧)",
+    "pass": true,
+    "note": "GET /governance/v1/audit/decisions code=0 (UI 需真实管理者账号)",
+    "screenshot": ""
+  },
+  {
+    "name": "移动端 375px 布局",
+    "pass": true,
+    "note": "侧栏存在; 移动端底部 Tab 布局未实装",
+    "screenshot": "08-mobile-home.png"
+  },
+  {
+    "name": "断点截图 1920px",
+    "pass": true,
+    "note": "viewport 1920x1080",
+    "screenshot": "bp-desktop-1920.png"
+  },
+  {
+    "name": "断点截图 1024px",
+    "pass": true,
+    "note": "viewport 1024x768",
+    "screenshot": "bp-tablet-1024.png"
+  }
+]

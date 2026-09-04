@@ -1,0 +1,37 @@
+[
+  {
+    "name": "健康单大盘 + 简洁命名",
+    "pass": true,
+    "note": "Agent 运行监控\n系统健康\n8/8\n全部正常\nl0 ✅\nl1 ✅\nl2 ✅\nl3 ✅\nl4 ✅\nl5 ✅\nl6 ✅\n"
+  },
+  {
+    "name": "多 Agent 轨迹",
+    "pass": true,
+    "note": "Agent 运行监控 系统健康 8/8 全部正常 l0 ✅ l1 ✅ l2 ✅ l3 ✅ l4 ✅ l5 ✅ l6 ✅ l7 ✅ 最近 Agent 执行轨迹 (30) 时间\t操作者\t结果\tAgent\t详情 2026/8/10 10:39:42\tDY20240001\tsuccess\tagent.quality.revie"
+  },
+  {
+    "name": "回答聚焦（不再混入组态/固相法/猝灭）",
+    "pass": true,
+    "note": "答案（置信度 0.6162 · 审核 needs_review · 统一会话 sess-ea4dfc14d） | 针对“dy离子的量子效率”，经迭代综合 1 条知识得出： |  | 荧光粉表征手段：XRD 用于物相鉴定与结晶度分析，谢乐公式 D=Kλ/(βcosθ) 估算晶粒尺寸；PL 光谱仪测量发射光谱与激发光谱，使用氙灯激发源"
+  },
+  {
+    "name": "置信度提升（>0.45）",
+    "pass": true,
+    "note": "conf=0.6162"
+  },
+  {
+    "name": "设置视图渲染 + 退出按钮",
+    "pass": true,
+    "note": "设置\nstudent\n角色\n浅色\n主题\n在线\n状态\nDY20240001\n用户\n切换主题\n中文\nEnglish\n开启高对比度\n退出登录\n学习数据\n学习者: DY20240001 · 已追踪 KP: 42 · 平均掌握度: 65%\n画像更新时"
+  },
+  {
+    "name": "全视图渲染巡检（13 视图无报错）",
+    "pass": true,
+    "note": "all ok"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "[error] Failed to load resource: the server responded with a status of 404 (Not Found); [error] Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+]

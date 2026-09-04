@@ -1,0 +1,37 @@
+[
+  {
+    "name": "前端多线协作时序图",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "主线 L1 完整 4 步",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "自纠回流线展示",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "自纠状态徽章",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "Agent 执行记录保留",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "助手面板多线协作文本",
+    "pass": true,
+    "note": "答疑结果\n针对“Dy3+的浓度猝灭机理是什么？”，经迭代综合 2 条知识得出：\n\n浓度猝灭是稀土发光材料的核心问题：随 Dy3+ 掺杂浓度升高，离子间距缩短，交叉弛豫（cross-relaxation"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Agent 超时兜底",
+    "pass": true,
+    "note": "status=completed"
+  },
+  {
+    "name": "学情事件采集入画像",
+    "pass": true,
+    "note": "interaction_log=4"
+  },
+  {
+    "name": "并发写不丢失更新",
+    "pass": true,
+    "note": "A-01=0.93 B-02=0.88 v3"
+  },
+  {
+    "name": "实时答疑多智能体应答",
+    "pass": true,
+    "note": "片段='答案（置信度 0.4673 · 审核 -）\\n针对“Dy3+ 的量子效率受哪些因素影响？”，综合 2'"
+  },
+  {
+    "name": "策略生成今日推荐",
+    "pass": true,
+    "note": "动态路径"
+  }
+]

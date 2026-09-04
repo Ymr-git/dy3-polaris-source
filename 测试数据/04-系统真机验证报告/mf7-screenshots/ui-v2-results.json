@@ -1,0 +1,57 @@
+[
+  {
+    "name": "四域中文 + θ 兜底",
+    "pass": true,
+    "note": "学情总览\n65%\n总体掌握度\n能力值 θ\n≈65%\n学习等级\nbeginner\n画像置信度\n58%\n四域掌握度（点击查看该领域知识点详情）\n能级跃迁理论 (A · 已掌握 7 · 薄弱 4)\n64%\n材料体系设计 (B · 已掌握 4 · 薄弱 1)\n64%\n合成制备工艺 (C · 已掌握 5 · 薄弱 0)\n68%\n"
+  },
+  {
+    "name": "四域点击详情弹层",
+    "pass": false,
+    "note": ""
+  },
+  {
+    "name": "KP 中文名显示",
+    "pass": true,
+    "note": "掌握度面板\n理论 64\n应用 64\n合成 68\n表征 67\n65\n总体掌握度\n总体掌握度\n65 / 100\n能力值 θ\n0\n学习等级\nbeginner\n画像置信度\n58%\nBKT 掌握度热力图 (42 KP · 点击卡片查看详情)\n平均掌握度\n65%\n能力值 θ\n≈65%\n薄弱点\n13\n画像置信度\n"
+  },
+  {
+    "name": "KP 卡片点击详情",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "今日推荐 KP 中文名",
+    "pass": true,
+    "note": "今日推荐（L4 策略决策）\n\n行动类型 practice · 置信度 0.72 · 检测到 5 个薄弱知识点, 建议按路径依次练习/考核\n\nA-05\nDy3+ 能级结构与 4f-4f 跃迁\n练习 → 目标 38%\n难度 高\nD-05\n量子效率 (绝对法) 测量\n考核 → 目标 55%\n难度 中\nB-01\n氟化物基质 ("
+  },
+  {
+    "name": "知识库动态导入",
+    "pass": false,
+    "note": ""
+  },
+  {
+    "name": "导入后动态识别（Tb3+）",
+    "pass": false,
+    "note": "答案（置信度 0.45 · 审核 needs_review · 统一会话 sess-26c471ebc）\n针对“Tb3+ 发光是什么”，经迭代综合 1 条知识得出：\n\nDy3+（镝离子）的电子组态为 [Xe]4f9。4f 电子受外层 5s2 5p6 电子屏蔽，使其发光性能受晶体场影响较小，但仍可通过"
+  },
+  {
+    "name": "会话历史显示",
+    "pass": true,
+    "note": "会话管理\n\n统一会话：实时答疑的提问会自动归入「实时答疑」类型会话，并关联 Agent 执行记录。\n\n+新建会话\nID\t类型\t状态\t提问数\tAgent 执行\t创建时间\t操作\nsess-26c471ebc876\t实时答疑\t进行中\t1\t1\t1970/1/22 00:12:06\tFork 暂停"
+  },
+  {
+    "name": "健康圆盘仪表",
+    "pass": true,
+    "note": "Agent 运行监控\n系统健康 — 圆盘仪表 (探活)\nl0\n✅ 正常\nl1\n✅ 正常\nl2\n✅ 正常\nl3\n✅ 正常\nl4\n✅ 正常\nl5\n✅ 正常\nl6\n✅"
+  },
+  {
+    "name": "轨迹时间格式化",
+    "pass": true,
+    "note": "Agent 运行监控 系统健康 — 圆盘仪表 (探活) l0 ✅ 正常 l1 ✅ 正常 l2 ✅ 正常 l3 ✅ 正常 l4 ✅ 正常 l5 ✅ 正常 l6 ✅ 正常 l7 ✅ 正常 最近 Agent 执行轨迹 (30) 时间\t操作者\t结果\tAgent\t详情 2026/8/10 09:45:16\t\tsuccess\tagent.guidance.decisio"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "[error] Failed to load resource: the server responded with a status of 404 (Not Found); [error] Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+]

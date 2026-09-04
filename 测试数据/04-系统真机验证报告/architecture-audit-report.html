@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>dy3-polaris 7+2 架构问题调研分析报告</title>
+<style>
+  body{font-family:'Microsoft YaHei',sans-serif;margin:24px;color:#222;background:#fafafa}
+  .card{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:20px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  h1{font-size:22px;margin:0 0 4px}h2{font-size:17px;border-left:4px solid #4a7dff;padding-left:10px;margin:18px 0 10px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f0f3f8;text-align:left;padding:7px 9px;border:1px solid #e3e6ea}
+  td{padding:7px 9px;border:1px solid #e3e6ea;vertical-align:top}
+  .sev-h{color:#c0392b;font-weight:700}.sev-m{color:#e67e22;font-weight:700}.sev-l{color:#7f8c8d}
+  .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px}
+  .bg-red{background:#fdecea;color:#c0392b}.bg-orange{background:#fef3e2;color:#e67e22}.bg-gray{background:#eef0f2;color:#555}
+  .ok{background:#eafaf1;color:#27ae60}.warn{background:#fef9e7;color:#b7950b}
+  .note{font-size:12px;color:#666;margin-top:8px}
+  .mono{font-family:Consolas,monospace;font-size:12px;background:#f4f4f4;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>dy3-polaris 7+2 架构问题调研分析报告</h1>
+<p class="note">调研范围：L0-L7 八层 + L1 网关 + L6 协议；方法：静态代码审计 + 运行时实证；日期：2026-08-07</p>
+</div>
+
+<div class="card">
+<h2>一、结论总览</h2>
+<table>
+<tr><th>类别</th><th>数量</th><th>代表问题</th><th>影响</th></tr>
+<tr><td>接口接线错误（运行时必炸）</td><td><b>5</b></td><td>L4 feedback、L5 session fork/close、IntegrationBridge publish 参数</td><td>端点调用即 500</td></tr>
+<tr><td>编制未接线（休眠）</td><td><b>8</b></td><td>L2/L3 缓存零实例化、L6 ToolRegistry 空、CC3/CC4 未挂载、WS 无发布方</td><td>功能白写，用户不可见</td></tr>
+<tr><td>占位/stub（静态）</td><td><b>7</b></td><td>L3 适配器全 mock、L4 synthesize mock、前端 7 个占位视图</td><td>数据不真实</td></tr>
+<tr><td>缓冲层缺失</td><td><b>4</b></td><td>L2Cache/L3Cache 休眠、MessageBus 历史无上限、无请求级结果缓存</td><td>性能与可靠性缺口</td></tr>
+<tr><td>前端数据流静态</td><td><b>5</b></td><td>无实时推流、无游戏面板、compare 字段不匹配、agents-chain 硬编码</td><td>可视化不动态</td></tr>
+</table>
+<p class="note">根因：按 7+2 分层逐步编码，各层"骨架+注册表+路由"先行，但跨层接线（工具绑定、事件订阅、范式路由、缓存挂载、WS 发布）未闭环，导致大量能力处于休眠态。</p>
+</div>
+
+<div class="card">
+<h2>二、接口接线错误（最高优先级，直接修复）</h2>
+<table>
+<tr><th>层</th><th>端点</th><th>错误</th><th>证据</th><th>严重度</th></tr>
+<tr><td>L4</td><td class="mono">POST /l4/decision/feedback</td><td>router 调 <span class="mono">record_feedback(action_id=..., feedback_type=..., rating=...)</span>，实现签名是 <span class="mono">(action_record: ActionRecord, rating, ...)</span></td><td>l4/api/router.py:191 vs l4/decision_engine.py:360</td><td><span class="sev-h">高</span></td></tr>
+<tr><td>L5</td><td class="mono">POST /l5/session/{id}/fork</td><td>调 <span class="mono">fork_session</span>，实现为 <span class="mono">create_fork</span></td><td>l5/api/router.py:395 vs l5/session_manager.py:805</td><td><span class="sev-h">高</span></td></tr>
+<tr><td>L5</td><td class="mono">POST /l5/session/{id}/close</td><td>调 <span class="mono">close_session</span>，实现为 <span class="mono">close</span></td><td>l5/api/router.py:413 vs l5/session_manager.py:755</td><td><span class="sev-h">高</span></td></tr>
+<tr><td>L5</td><td class="mono">IntegrationBridge.publish_learner_event</td><td>调 <span class="mono">publish(channel=...)</span>，实现需 Message 对象（被 except 吞掉静默丢失）</td><td>l5/integration_bridge.py:355/389</td><td><span class="sev-h">高</span></td></tr>
+<tr><td>L5</td><td class="mono">POST /l5/message/publish</td><td>外部频道未注册发布即 500（频道白名单限制）</td><td>communication.py:294 + unified_app.py:1088</td><td><span class="sev-m">中</span></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>三、Agent Skill 体系缺口（核心）</h2>
+<table>
+<tr><th>Agent</th><th>声明 tools（default_agents.py）</th><th>实际状态</th></tr>
+<tr><td>学情诊断</td><td class="mono">internal.bkt_compute / irt_evaluate / forgetfulness_scan</td><td>L6 有近名实现但<span class="bg-red badge">名称前缀不匹配</span>（注册名无 internal. 前缀）、无绑定、无调用</td></tr>
+<tr><td>知识生成</td><td class="mono">l3.rag_retrieve / connector_tier1_query / connector_tier2_query</td><td><span class="bg-red badge">4 个纯字符串无实现</span>（全库无 rag_retrieve 工具）</td></tr>
+<tr><td>审核校验</td><td class="mono">internal.rule_engine_check / cross_validation / standard_value_check</td><td>有近名实现但为 stub（启发式 mock）</td></tr>
+<tr><td>导学决策</td><td class="mono">internal.topology_analysis / path_simulation / uncertainty_confirm</td><td>前两者 stub；<span class="bg-red badge">uncertainty_confirm 无实现</span></td></tr>
+</table>
+<p class="note"><b>脱钩证据</b>：① AgentFactory 未传 tool_registry，声明工具从不校验/执行；② worker 直接调依赖注入服务，与声明 tools 零关系；③ L6CoreEngine.initialize() 创建空 ToolRegistry（load_all_tools 从未被调用）→ GET /tools 空、call_tool 全 MethodNotFound；④ 全库无任何 Agent 对 MessageBus subscribe 注册回调（广播无消费者）；⑤ run_guidance 是进程内硬编码串联，非真协作。</p>
+</div>
+
+<div class="card">
+<h2>四、缓冲层/缓存缺口</h2>
+<table>
+<tr><th>位置</th><th>现状</th><th>问题</th></tr>
+<tr><td>L2 l2/cache.py L2Cache</td><td>完整实现（分层 TTL+write-through）</td><td><span class="bg-orange badge">全库零实例化</span>（休眠）</td></tr>
+<tr><td>L3 l3/cache.py QueryCache</td><td>完整实现（命名空间缓存+级联失效）</td><td><span class="bg-orange badge">UnifiedApp 用裸 KnowledgeStore</span>（休眠）</td></tr>
+<tr><td>L5 MessageBus._history</td><td>无界内存保留</td><td>无容量上限/清理/持久化</td></tr>
+<tr><td>请求级结果缓存</td><td>仅 L5 编排结果缓存</td><td>L2/L3 无请求级缓冲</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>五、前端静态/休眠问题（用户关注核心）</h2>
+<table>
+<tr><th>问题</th><th>现状</th><th>影响</th></tr>
+<tr><td>无游戏属性面板可视化</td><td>掌握度仅热力图+环形图（SVG），无雷达/六边形面板</td><td>不满足"像游戏属性面板"需求</td></tr>
+<tr><td>无实时推流</td><td>broadcast 通道 bkt_update 定义了，但 window.Dy3BKT 未实现 + 后端无发布方</td><td>掌握度无法实时变化，只能切视图刷新</td></tr>
+<tr><td>无轮询机制</td><td>全库无数据轮询 setInterval</td><td>停留页面不更新</td></tr>
+<tr><td>compare 字段不匹配</td><td>前端读 <span class="mono">overall_mastery/mastery</span>，后端 LearnerSnapshot 无此字段</td><td>恒显示 "-"</td></tr>
+<tr><td>time-travel 字段不匹配</td><td>前端读 <span class="mono">p.history</span>，后端无</td><td>时间线恒空</td></tr>
+<tr><td>画像数据状态卡位置</td><td>在设置弹窗内（settings）</td><td>用户要求放到学习者主页</td></tr>
+<tr><td>无初测初始打分</td><td>demo 画像直接 seed 42 KP 值；真实新用户无初测概念</td><td>不满足"初测打分/不测默认 0"</td></tr>
+<tr><td>遗忘衰减未落地到画像</td><td>BKT 有遗忘衰减公式，但画像 kp_mastery 不随时间流逝下浮</td><td>"时间流逝动态下浮"未实现</td></tr>
+<tr><td>agents-chain 硬编码</td><td>AGENT_LINKS/AGENT_DESC 全静态数组</td><td>无真实数据</td></tr>
+<tr><td>占位视图</td><td>learn-path/query/kb-graph/users*/overview-monitor 等</td><td>7+ 个"待实现"页</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>六、休眠子系统清单（编制未挂载）</h2>
+<table>
+<tr><th>子系统</th><th>状态</th><th>处置建议</th></tr>
+<tr><td>CC3 KPA 引擎（~30 端点）</td><td>导出但未挂载</td><td>治理层增强（低优先）</td></tr>
+<tr><td>CC4 集成网关（~30 端点）</td><td>导出但未挂载</td><td>治理层增强（低优先）</td></tr>
+<tr><td>L7 dashboard_api / artifact_api</td><td>导出但未挂载</td><td>挂载（中优先）</td></tr>
+<tr><td>L6 legacy 适配器</td><td>未挂载</td><td>低优先</td></tr>
+<tr><td>kernel_persistence CheckpointStore</td><td>完整实现未接入</td><td>挂载（中优先）</td></tr>
+<tr><td>HandoffManager</td><td>完整实现全库无使用</td><td>接入按需协作（本轮）</td></tr>
+<tr><td>L3 外部数据源适配器（20+）</td><td>全 mock 数据</td><td>保持 mock（离线演示），标注</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>七、修复与增强计划（按优先级）</h2>
+<table>
+<tr><th>优先级</th><th>工作项</th><th>对应问题</th></tr>
+<tr><td><span class="badge bg-red">P0</span></td><td>修复 5 处接口接线错误（L4 feedback / L5 fork / L5 close / Bridge publish / 频道白名单）</td><td>二</td></tr>
+<tr><td><span class="badge bg-red">P0</span></td><td>Agent Skill 执行器：tools 绑定真实实现 + 补齐 rag_retrieve/uncertainty_confirm + MessageBus 订阅消费（事件驱动按需协作）</td><td>三</td></tr>
+<tr><td><span class="badge bg-orange">P1</span></td><td>动态掌握度可视化：游戏属性面板（SVG 雷达/六边形+百分制）+ WS bkt_update 推流（后端发布+前端 Dy3BKT）+ 轮询兜底</td><td>五</td></tr>
+<tr><td><span class="badge bg-orange">P1</span></td><td>画像动态化：overall_mastery/dimensions 字段 + 遗忘衰减随时间下浮 + 初测初始打分（不测默认 0）+ 画像数据状态卡入学习者主页</td><td>五</td></tr>
+<tr><td><span class="badge bg-gray">P2</span></td><td>挂载 L2/L3 缓存（缓冲层）+ L7 dashboard/artifact API + 修复 compare/time-travel 字段</td><td>四/六</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>八、结论</h2>
+<p>系统"骨架层"质量较高（各层路由/模型/服务完整、测试 626 个通过），但存在三类系统性断裂：<b>声明与执行脱钩</b>（Agent tools、缓存、WS 事件）、<b>跨层接口签名不一致</b>（5 处运行时必炸）、<b>前端数据流静态化</b>（无推流/无动态面板/字段不匹配）。按 P0→P2 顺序修复后，可达成"智能体按需动态协作 + 掌握度动态可视化反馈"的目标。</p>
+</div>
+</body>
+</html>

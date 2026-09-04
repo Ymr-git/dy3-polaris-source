@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "revision": 21,
+  "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+  "learner_id": "DY20240001",
+  "session_id": "request-task-85d02a21eefe4ef6a3da133948937ce2",
+  "query": "什么是镧系收缩？",
+  "goal": "",
+  "brief": "什么是镧系收缩？",
+  "state": "PARTIAL",
+  "created_at": 1788397650.5533028,
+  "updated_at": 1788397664.2036135,
+  "task_events": [
+    {
+      "event_id": "task-event-7a82b179650a455dbdad46571ae636da",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397650.5532649,
+      "producer": "api_query",
+      "state_before": "",
+      "state_after": "CREATED"
+    },
+    {
+      "event_id": "task-event-6a8ee0bd9fcf4fd192bf18edc0324875",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "TaskCreated",
+      "timestamp": 1788397650.5532756,
+      "producer": "api_query",
+      "state_before": "CREATED",
+      "state_after": "CREATED",
+      "details": {
+        "schema_version": 1
+      }
+    },
+    {
+      "event_id": "task-event-8f70e660fe2b4b8a99a5f4a76750b977",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397650.592213,
+      "producer": "api_query",
+      "state_before": "CREATED",
+      "state_after": "UNDERSTANDING"
+    },
+    {
+      "event_id": "task-event-999abf22f2ea4c29a5df40b758917d1a",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397650.9363248,
+      "producer": "run_guidance",
+      "state_before": "UNDERSTANDING",
+      "state_after": "PLANNING"
+    },
+    {
+      "event_id": "task-event-bc0d2b73b0d443f98396afecbb25d4bd",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentStarted",
+      "timestamp": 1788397650.949918,
+      "producer": "agent.learning.diagnosis",
+      "state_before": "PLANNING",
+      "state_after": "PLANNING",
+      "details": {
+        "agent_id": "agent.learning.diagnosis"
+      }
+    },
+    {
+      "event_id": "task-event-eb27b88736f24184a1ab57cba8ff7960",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentFinished",
+      "timestamp": 1788397650.9630094,
+      "producer": "agent.learning.diagnosis",
+      "state_before": "PLANNING",
+      "state_after": "PLANNING",
+      "details": {
+        "agent_id": "agent.learning.diagnosis"
+      }
+    },
+    {
+      "event_id": "task-event-b8853fa5306645b588e70ac041985458",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentContributionRecorded",
+      "timestamp": 1788397650.9782045,
+      "producer": "agent.learning.diagnosis",
+      "state_before": "PLANNING",
+      "state_after": "PLANNING",
+      "details": {
+        "agent_id": "agent.learning.diagnosis",
+        "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-establish_learner_context-1"
+      }
+    },
+    {
+      "event_id": "task-event-c26620f6127b420c89483c6e2a3ff19e",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397650.991303,
+      "producer": "run_guidance",
+      "state_before": "PLANNING",
+      "state_after": "RETRIEVING"
+    },
+    {
+      "event_id": "task-event-db6c878bd15448fab6186a154a0a986d",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentStarted",
+      "timestamp": 1788397651.0040562,
+      "producer": "agent.knowledge.generation",
+      "state_before": "RETRIEVING",
+      "state_after": "RETRIEVING",
+      "details": {
+        "agent_id": "agent.knowledge.generation"
+      }
+    },
+    {
+      "event_id": "task-event-dbb9984a273d487d9e1ca2d81dd6607e",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "RetrievalCompleted",
+      "timestamp": 1788397664.0256042,
+      "producer": "agent.knowledge.generation",
+      "state_before": "RETRIEVING",
+      "state_after": "RETRIEVING",
+      "details": {
+        "query_count": 1,
+        "evidence_version": 1
+      }
+    },
+    {
+      "event_id": "task-event-1dd667468e904957b99e5f06c20cfe3a",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentFinished",
+      "timestamp": 1788397664.0453515,
+      "producer": "agent.knowledge.generation",
+      "state_before": "RETRIEVING",
+      "state_after": "RETRIEVING",
+      "details": {
+        "agent_id": "agent.knowledge.generation"
+      }
+    },
+    {
+      "event_id": "task-event-193de9afbdac40bb98414dff523570c6",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentContributionRecorded",
+      "timestamp": 1788397664.0618117,
+      "producer": "agent.knowledge.generation",
+      "state_before": "RETRIEVING",
+      "state_after": "RETRIEVING",
+      "details": {
+        "agent_id": "agent.knowledge.generation",
+        "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-identify_fact-2"
+      }
+    },
+    {
+      "event_id": "task-event-d56e7aef3ec640629026e6fb6a042d61",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397664.0756385,
+      "producer": "run_guidance",
+      "state_before": "RETRIEVING",
+      "state_after": "COLLABORATING"
+    },
+    {
+      "event_id": "task-event-3e4e39881fd94e0ab6f4ecfaac10d63b",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentContributionRecorded",
+      "timestamp": 1788397664.0878036,
+      "producer": "agent.quality.review",
+      "state_before": "COLLABORATING",
+      "state_after": "COLLABORATING",
+      "details": {
+        "agent_id": "agent.quality.review",
+        "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-verify_fact_evidence-3",
+        "status": "skipped"
+      }
+    },
+    {
+      "event_id": "task-event-ea88c393db974a80b30027279f8f8482",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentStarted",
+      "timestamp": 1788397664.1046605,
+      "producer": "agent.guidance.decision",
+      "state_before": "COLLABORATING",
+      "state_after": "COLLABORATING",
+      "details": {
+        "agent_id": "agent.guidance.decision"
+      }
+    },
+    {
+      "event_id": "task-event-8c18637006e74b869af9a4d1dda8833b",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentFinished",
+      "timestamp": 1788397664.1264298,
+      "producer": "agent.guidance.decision",
+      "state_before": "COLLABORATING",
+      "state_after": "COLLABORATING",
+      "details": {
+        "agent_id": "agent.guidance.decision"
+      }
+    },
+    {
+      "event_id": "task-event-550864a66b504d1597c8cf4e9994f40a",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "AgentContributionRecorded",
+      "timestamp": 1788397664.1457393,
+      "producer": "agent.guidance.decision",
+      "state_before": "COLLABORATING",
+      "state_after": "COLLABORATING",
+      "details": {
+        "agent_id": "agent.guidance.decision",
+        "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-form_concise_response-4"
+      }
+    },
+    {
+      "event_id": "task-event-0a3aeb264c184ba88d6c327ad0a551d5",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "activity",
+      "event_type": "ReleaseDecided",
+      "timestamp": 1788397664.1673532,
+      "producer": "agent.guidance.decision",
+      "state_before": "COLLABORATING",
+      "state_after": "COLLABORATING",
+      "details": {
+        "release_status": "DEGRADED",
+        "eligible": false,
+        "correction_count": 0
+      }
+    },
+    {
+      "event_id": "task-event-66ef0efcbeee46209d53fff76d7428d5",
+      "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+      "event_kind": "state",
+      "event_type": "StateChanged",
+      "timestamp": 1788397664.1810317,
+      "producer": "run_guidance",
+      "state_before": "COLLABORATING",
+      "state_after": "PARTIAL"
+    }
+  ],
+  "agent_contributions": [
+    {
+      "agent_id": "agent.learning.diagnosis",
+      "result": "observed",
+      "time": 1788397650.9781082,
+      "detail": "学习者 DY20240001 当前能力数据不足（学习阶段 unknown），薄弱知识点 0 个；教学深度按 foundation 处理。 学习者理解阶段为 UNKNOWN_LEARNER；当前画像仍是低置信先验，需要后续观察或自适应诊断验证"
+    },
+    {
+      "agent_id": "agent.knowledge.generation",
+      "result": "observed",
+      "time": 1788397664.0617473,
+      "detail": "知识生成产物未通过发布门，正文已隐藏"
+    },
+    {
+      "agent_id": "agent.quality.review",
+      "result": "observed",
+      "time": 1788397664.0877569,
+      "detail": "不可用、澄清或空回答，未执行真实审核"
+    },
+    {
+      "agent_id": "agent.guidance.decision",
+      "result": "observed",
+      "time": 1788397664.1456842,
+      "detail": "PARTIAL_ANSWER: verdict=skipped; accepted=0, rejected=0, uncertain=1"
+    },
+    {
+      "agent_id": "agent.guidance.decision",
+      "result": "observed",
+      "time": 1788397664.1456852,
+      "detail": "PARTIAL_ANSWER: 补充缺失证据与适用条件"
+    }
+  ],
+  "reviewer": {
+    "challenges": [],
+    "revisions": [],
+    "review": {
+      "agent_id": "agent.quality.review",
+      "status": "not_completed",
+      "verdict": "skipped",
+      "confidence": 0.0,
+      "reason": "审核能力当前不可用，系统没有冒充完整审核结果。"
+    },
+    "release": {
+      "status": "DEGRADED",
+      "eligible": false,
+      "message": "审核能力当前不可用，系统没有冒充完整审核结果。",
+      "reason_codes": [
+        "real_reviewer_not_executed",
+        "review_mapping_refused",
+        "review_not_completed",
+        "review_not_approved",
+        "evidence_not_selected",
+        "evidence_unavailable",
+        "evidence_source_missing",
+        "answer_evidence_review_artifact_mismatch",
+        "final_answer_artifact_mismatch",
+        "collaboration_result_not_eligible",
+        "reviewed_answer_missing",
+        "scientific_grounding_artifact_mismatch",
+        "scientific_grounding:fact_not_directly_supported",
+        "scientific_grounding:claim_evidence_review_identity_mismatch"
+      ],
+      "review_status": "",
+      "review_verdict": "skipped",
+      "correction_count": 0,
+      "evidence_versions": [
+        1
+      ]
+    }
+  },
+  "answer": {
+    "identity": "",
+    "version": 0,
+    "text": ""
+  },
+  "claim_evidence_source": [],
+  "resource_plan": {
+    "resources": []
+  },
+  "practice_plan": {},
+  "practice_receipts": [],
+  "teaching_decision": {
+    "content_depth": "foundation",
+    "explanation_strategy": "foundation_conceptual",
+    "representation_modes": [
+      "structured_text"
+    ],
+    "difficulty_strategy": "diagnose_then_maintain",
+    "resource_modes": [
+      "concept_resource",
+      "guided_practice",
+      "staged_assessment"
+    ],
+    "next_focus": "unknown",
+    "rationale": [
+      "use the normalized learner depth from Diagnosis"
+    ],
+    "confidence": 0.0
+  },
+  "next_action": {
+    "action_type": "degraded",
+    "recommended_path": [
+      {
+        "action": "collect_evidence",
+        "topic": "识别问题中需要确认的具体事实：什么是镧系收缩？、knowledge or evidence unavailable"
+      }
+    ]
+  },
+  "resume_route": "learning",
+  "failures": [],
+  "degradation": {},
+  "learning_blocks": [
+    {
+      "kind": "answer",
+      "available": false
+    },
+    {
+      "kind": "evidence",
+      "count": 0
+    },
+    {
+      "kind": "review",
+      "verdict": "skipped"
+    },
+    {
+      "kind": "next_action",
+      "count": 1
+    }
+  ],
+  "public_result": {
+    "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+    "task_state": "PARTIAL",
+    "task_events": [
+      {
+        "event_id": "task-event-7a82b179650a455dbdad46571ae636da",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397650.5532649,
+        "producer": "api_query",
+        "state_before": "",
+        "state_after": "CREATED"
+      },
+      {
+        "event_id": "task-event-6a8ee0bd9fcf4fd192bf18edc0324875",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "TaskCreated",
+        "timestamp": 1788397650.5532756,
+        "producer": "api_query",
+        "state_before": "CREATED",
+        "state_after": "CREATED",
+        "details": {
+          "schema_version": 1
+        }
+      },
+      {
+        "event_id": "task-event-8f70e660fe2b4b8a99a5f4a76750b977",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397650.592213,
+        "producer": "api_query",
+        "state_before": "CREATED",
+        "state_after": "UNDERSTANDING"
+      },
+      {
+        "event_id": "task-event-999abf22f2ea4c29a5df40b758917d1a",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397650.9363248,
+        "producer": "run_guidance",
+        "state_before": "UNDERSTANDING",
+        "state_after": "PLANNING"
+      },
+      {
+        "event_id": "task-event-bc0d2b73b0d443f98396afecbb25d4bd",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentStarted",
+        "timestamp": 1788397650.949918,
+        "producer": "agent.learning.diagnosis",
+        "state_before": "PLANNING",
+        "state_after": "PLANNING",
+        "details": {
+          "agent_id": "agent.learning.diagnosis"
+        }
+      },
+      {
+        "event_id": "task-event-eb27b88736f24184a1ab57cba8ff7960",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentFinished",
+        "timestamp": 1788397650.9630094,
+        "producer": "agent.learning.diagnosis",
+        "state_before": "PLANNING",
+        "state_after": "PLANNING",
+        "details": {
+          "agent_id": "agent.learning.diagnosis"
+        }
+      },
+      {
+        "event_id": "task-event-b8853fa5306645b588e70ac041985458",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentContributionRecorded",
+        "timestamp": 1788397650.9782045,
+        "producer": "agent.learning.diagnosis",
+        "state_before": "PLANNING",
+        "state_after": "PLANNING",
+        "details": {
+          "agent_id": "agent.learning.diagnosis",
+          "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-establish_learner_context-1"
+        }
+      },
+      {
+        "event_id": "task-event-c26620f6127b420c89483c6e2a3ff19e",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397650.991303,
+        "producer": "run_guidance",
+        "state_before": "PLANNING",
+        "state_after": "RETRIEVING"
+      },
+      {
+        "event_id": "task-event-db6c878bd15448fab6186a154a0a986d",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentStarted",
+        "timestamp": 1788397651.0040562,
+        "producer": "agent.knowledge.generation",
+        "state_before": "RETRIEVING",
+        "state_after": "RETRIEVING",
+        "details": {
+          "agent_id": "agent.knowledge.generation"
+        }
+      },
+      {
+        "event_id": "task-event-dbb9984a273d487d9e1ca2d81dd6607e",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "RetrievalCompleted",
+        "timestamp": 1788397664.0256042,
+        "producer": "agent.knowledge.generation",
+        "state_before": "RETRIEVING",
+        "state_after": "RETRIEVING",
+        "details": {
+          "query_count": 1,
+          "evidence_version": 1
+        }
+      },
+      {
+        "event_id": "task-event-1dd667468e904957b99e5f06c20cfe3a",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentFinished",
+        "timestamp": 1788397664.0453515,
+        "producer": "agent.knowledge.generation",
+        "state_before": "RETRIEVING",
+        "state_after": "RETRIEVING",
+        "details": {
+          "agent_id": "agent.knowledge.generation"
+        }
+      },
+      {
+        "event_id": "task-event-193de9afbdac40bb98414dff523570c6",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentContributionRecorded",
+        "timestamp": 1788397664.0618117,
+        "producer": "agent.knowledge.generation",
+        "state_before": "RETRIEVING",
+        "state_after": "RETRIEVING",
+        "details": {
+          "agent_id": "agent.knowledge.generation",
+          "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-identify_fact-2"
+        }
+      },
+      {
+        "event_id": "task-event-d56e7aef3ec640629026e6fb6a042d61",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397664.0756385,
+        "producer": "run_guidance",
+        "state_before": "RETRIEVING",
+        "state_after": "COLLABORATING"
+      },
+      {
+        "event_id": "task-event-3e4e39881fd94e0ab6f4ecfaac10d63b",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentContributionRecorded",
+        "timestamp": 1788397664.0878036,
+        "producer": "agent.quality.review",
+        "state_before": "COLLABORATING",
+        "state_after": "COLLABORATING",
+        "details": {
+          "agent_id": "agent.quality.review",
+          "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-verify_fact_evidence-3",
+          "status": "skipped"
+        }
+      },
+      {
+        "event_id": "task-event-ea88c393db974a80b30027279f8f8482",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentStarted",
+        "timestamp": 1788397664.1046605,
+        "producer": "agent.guidance.decision",
+        "state_before": "COLLABORATING",
+        "state_after": "COLLABORATING",
+        "details": {
+          "agent_id": "agent.guidance.decision"
+        }
+      },
+      {
+        "event_id": "task-event-8c18637006e74b869af9a4d1dda8833b",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentFinished",
+        "timestamp": 1788397664.1264298,
+        "producer": "agent.guidance.decision",
+        "state_before": "COLLABORATING",
+        "state_after": "COLLABORATING",
+        "details": {
+          "agent_id": "agent.guidance.decision"
+        }
+      },
+      {
+        "event_id": "task-event-550864a66b504d1597c8cf4e9994f40a",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "AgentContributionRecorded",
+        "timestamp": 1788397664.1457393,
+        "producer": "agent.guidance.decision",
+        "state_before": "COLLABORATING",
+        "state_after": "COLLABORATING",
+        "details": {
+          "agent_id": "agent.guidance.decision",
+          "contribution_id": "contrib-task-85d02a21eefe4ef6a3da133948937ce2-form_concise_response-4"
+        }
+      },
+      {
+        "event_id": "task-event-0a3aeb264c184ba88d6c327ad0a551d5",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "activity",
+        "event_type": "ReleaseDecided",
+        "timestamp": 1788397664.1673532,
+        "producer": "agent.guidance.decision",
+        "state_before": "COLLABORATING",
+        "state_after": "COLLABORATING",
+        "details": {
+          "release_status": "DEGRADED",
+          "eligible": false,
+          "correction_count": 0
+        }
+      },
+      {
+        "event_id": "task-event-66ef0efcbeee46209d53fff76d7428d5",
+        "task_id": "task-85d02a21eefe4ef6a3da133948937ce2",
+        "event_kind": "state",
+        "event_type": "StateChanged",
+        "timestamp": 1788397664.1810317,
+        "producer": "run_guidance",
+        "state_before": "COLLABORATING",
+        "state_after": "PARTIAL"
+      }
+    ],
+    "action_type": "degraded",
+    "confidence": 0.25,
+    "recommended_path": [
+      {
+        "action": "collect_evidence",
+        "topic": "识别问题中需要确认的具体事实：什么是镧系收缩？、knowledge or evidence unavailable"
+      }
+    ],
+    "evidence": [],
+    "sources": [],
+    "requires_confirmation": false,
+    "knowledge_unavailable": false,
+    "review": {
+      "agent_id": "agent.quality.review",
+      "status": "not_completed",
+      "verdict": "skipped",
+      "confidence": 0.0,
+      "reason": "审核能力当前不可用，系统没有冒充完整审核结果。"
+    },
+    "quality_release": {
+      "status": "DEGRADED",
+      "eligible": false,
+      "message": "审核能力当前不可用，系统没有冒充完整审核结果。",
+      "reason_codes": [
+        "real_reviewer_not_executed",
+        "review_mapping_refused",
+        "review_not_completed",
+        "review_not_approved",
+        "evidence_not_selected",
+        "evidence_unavailable",
+        "evidence_source_missing",
+        "answer_evidence_review_artifact_mismatch",
+        "final_answer_artifact_mismatch",
+        "collaboration_result_not_eligible",
+        "reviewed_answer_missing",
+        "scientific_grounding_artifact_mismatch",
+        "scientific_grounding:fact_not_directly_supported",
+        "scientific_grounding:claim_evidence_review_identity_mismatch"
+      ],
+      "review_status": "",
+      "review_verdict": "skipped",
+      "correction_count": 0,
+      "evidence_versions": [
+        1
+      ]
+    },
+    "teaching_strategy": {
+      "content_depth": "foundation",
+      "explanation_strategy": "foundation_conceptual",
+      "representation_modes": [
+        "structured_text"
+      ],
+      "difficulty_strategy": "diagnose_then_maintain",
+      "resource_modes": [
+        "concept_resource",
+        "guided_practice",
+        "staged_assessment"
+      ],
+      "next_focus": "unknown",
+      "rationale": [
+        "use the normalized learner depth from Diagnosis"
+      ],
+      "confidence": 0.0
+    },
+    "learning_resources": [],
+    "learner_context": {
+      "learner_id": "DY20240001",
+      "lifecycle_stage": "UNKNOWN_LEARNER",
+      "state": "UNKNOWN",
+      "declared_background": {},
+      "observed_record_count": 0,
+      "model_state_available": false,
+      "mastery_summary": {
+        "known_count": 0,
+        "weak_kps": [],
+        "source_class": "UNKNOWN"
+      },
+      "diagnostic": {
+        "needed": true,
+        "target_concept": "unknown",
+        "reason": "collect an optional learning goal before selecting a domain diagnostic"
+      },
+      "teaching_decision": {
+        "content_depth": "foundation",
+        "explanation_strategy": "foundation_conceptual",
+        "representation_modes": [
+          "structured_text"
+        ],
+        "difficulty_strategy": "diagnose_then_maintain",
+        "next_focus": "unknown",
+        "confidence": 0.0,
+        "source_class": "DECISION"
+      },
+      "knowledge_context": {
+        "learning_goal": [],
+        "nodes": [],
+        "edges": [],
+        "path": {
+          "current_position": "unknown",
+          "next_concept": "unknown",
+          "prerequisites_to_learn": [],
+          "reason": "no mapped Concept Relation supports a next learning decision",
+          "expected_outcome": "no teaching progression inferred",
+          "confidence": 0.0
+        },
+        "source_class": "DERIVED"
+      },
+      "source_classes": [
+        "OBSERVED",
+        "MODEL_INFERRED",
+        "DERIVED",
+        "DECISION"
+      ],
+      "report": {
+        "learner_id": "DY20240001",
+        "status": "UNKNOWN",
+        "evidence_sufficiency": {
+          "answer_record_count": 0,
+          "modelled_kp_count": 0,
+          "irt_response_count": 0,
+          "source_class": "UNKNOWN"
+        },
+        "ability": {
+          "theta": null,
+          "standard_error": null,
+          "status": "UNKNOWN"
+        },
+        "findings": [],
+        "difficulty_decision": {
+          "decision": "DIAGNOSE_FIRST",
+          "reason": "没有真实作答，不能推定能力或调高难度。",
+          "source_class": "DECISION"
+        },
+        "learning_path": {
+          "current_position": "unknown",
+          "next_concept": "unknown",
+          "prerequisites_to_learn": [],
+          "reason": "no mapped Concept Relation supports a next learning decision",
+          "expected_outcome": "no teaching progression inferred",
+          "confidence": 0.0,
+          "nodes": [],
+          "edges": [],
+          "source_class": "DERIVED_FROM_R06_RELATIONS"
+        },
+        "growth_timeline": [],
+        "next_action": {
+          "type": "PRACTICE",
+          "target": "unknown",
+          "reason": "没有真实作答，不能推定能力或调高难度。",
+          "source_class": "DECISION"
+        },
+        "updated_at": 1788397650.9362595
+      }
+    },
+    "knowledge_context": {
+      "learning_goal": [],
+      "nodes": [],
+      "edges": [],
+      "path": {
+        "current_position": "unknown",
+        "next_concept": "unknown",
+        "prerequisites_to_learn": [],
+        "reason": "no mapped Concept Relation supports a next learning decision",
+        "expected_outcome": "no teaching progression inferred",
+        "confidence": 0.0
+      },
+      "source_class": "DERIVED",
+      "scientific_grounding": {
+        "status": "WITHHELD",
+        "claims": [],
+        "support_counts": {
+          "MENTION": 0,
+          "CANDIDATE": 0,
+          "SUPPORTS": 0,
+          "CONFLICTS": 0,
+          "INSUFFICIENT": 0
+        },
+        "issues": [
+          "fact_not_directly_supported",
+          "claim_evidence_review_identity_mismatch"
+        ],
+        "identity_consistent": false,
+        "source_class": "DERIVED_FROM_LOCAL_EVIDENCE"
+      }
+    },
+    "agent_trace": [
+      {
+        "agent_id": "agent.learning.diagnosis",
+        "result": "observed",
+        "time": 1788397650.9781082,
+        "detail": "学习者 DY20240001 当前能力数据不足（学习阶段 unknown），薄弱知识点 0 个；教学深度按 foundation 处理。 学习者理解阶段为 UNKNOWN_LEARNER；当前画像仍是低置信先验，需要后续观察或自适应诊断验证"
+      },
+      {
+        "agent_id": "agent.knowledge.generation",
+        "result": "observed",
+        "time": 1788397664.0617473,
+        "detail": "知识生成产物未通过发布门，正文已隐藏"
+      },
+      {
+        "agent_id": "agent.quality.review",
+        "result": "observed",
+        "time": 1788397664.0877569,
+        "detail": "不可用、澄清或空回答，未执行真实审核"
+      },
+      {
+        "agent_id": "agent.guidance.decision",
+        "result": "observed",
+        "time": 1788397664.1456842,
+        "detail": "PARTIAL_ANSWER: verdict=skipped; accepted=0, rejected=0, uncertain=1"
+      },
+      {
+        "agent_id": "agent.guidance.decision",
+        "result": "observed",
+        "time": 1788397664.1456852,
+        "detail": "PARTIAL_ANSWER: 补充缺失证据与适用条件"
+      }
+    ],
+    "collab_lines": [
+      {
+        "line": "T4",
+        "label": "SUBTASK_READY",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "task.scheduler",
+            "elapsed_ms": null,
+            "output": "子任务 establish_learner_context 进入 READY"
+          }
+        ]
+      },
+      {
+        "line": "T7",
+        "label": "CONTRIBUTION_PRODUCED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "agent.learning.diagnosis",
+            "elapsed_ms": null,
+            "output": "学习者 DY20240001 当前能力数据不足（学习阶段 unknown），薄弱知识点 0 个；教学深度按 foundation 处理。 学习者理解阶段为 UNKNOWN_LEARNER；当前画像仍是低置信先验，需要后续观察或自适应诊断验证。 本次教学采用 foundation_conceptual，内容深度为 fou"
+          }
+        ]
+      },
+      {
+        "line": "T9",
+        "label": "SUBTASK_READY",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "task.scheduler",
+            "elapsed_ms": null,
+            "output": "子任务 identify_fact 进入 READY"
+          }
+        ]
+      },
+      {
+        "line": "T14",
+        "label": "EVIDENCE_RETRIEVED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "retrieval.runtime",
+            "elapsed_ms": null,
+            "output": "EvidencePack v1 获得 6 条真实证据"
+          }
+        ]
+      },
+      {
+        "line": "T16",
+        "label": "CONTRIBUTION_PRODUCED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "agent.knowledge.generation",
+            "elapsed_ms": null,
+            "output": "知识生成产物未通过发布门，正文已隐藏"
+          }
+        ]
+      },
+      {
+        "line": "T18",
+        "label": "SUBTASK_READY",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "task.scheduler",
+            "elapsed_ms": null,
+            "output": "子任务 verify_fact_evidence 进入 READY"
+          }
+        ]
+      },
+      {
+        "line": "T20",
+        "label": "CONTRIBUTION_PRODUCED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "agent.quality.review",
+            "elapsed_ms": null,
+            "output": "不可用、澄清或空回答，未执行真实审核"
+          }
+        ]
+      },
+      {
+        "line": "T22",
+        "label": "SUBTASK_READY",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "task.scheduler",
+            "elapsed_ms": null,
+            "output": "子任务 form_concise_response 进入 READY"
+          }
+        ]
+      },
+      {
+        "line": "T25",
+        "label": "CONTRIBUTION_PRODUCED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "agent.guidance.decision",
+            "elapsed_ms": null,
+            "output": "PARTIAL_ANSWER: verdict=skipped; accepted=0, rejected=0, uncertain=1"
+          }
+        ]
+      },
+      {
+        "line": "T26",
+        "label": "GUIDANCE_DECIDED",
+        "kind": "runtime_fact",
+        "steps": [
+          {
+            "agent": "agent.guidance.decision",
+            "elapsed_ms": null,
+            "output": "PARTIAL_ANSWER: 补充缺失证据与适用条件"
+          }
+        ]
+      }
+    ],
+    "self_correction": null,
+    "reasoning_loop": null,
+    "flow_events": [
+      {
+        "seq": 3,
+        "step": "TASK_DECOMPOSED",
+        "agent": "task.planning",
+        "label": "形成 4 个受约束子任务",
+        "to": "",
+        "detail": "形成 4 个受约束子任务",
+        "elapsed_ms": null
+      },
+      {
+        "seq": 7,
+        "step": "CONTRIBUTION_PRODUCED",
+        "agent": "agent.learning.diagnosis",
+        "label": "学习者 DY20240001 当前能力数据不足（学习阶段 unknown），薄弱知识点 0 个；教学深度按 foundation 处理。 学习者理解阶段为 UN",
+        "to": "",
+        "detail": "学习者 DY20240001 当前能力数据不足（学习阶段 unknown），薄弱知识点 0 个；教学深度按 foundation 处理。 学习者理解阶段为 UNKNOWN_LEARNER；当前画像仍是低置信先验，需要后续观察或自适应诊断验证。 本次教学采用 foundation_conceptual，内容深度为 fou",
+        "elapsed_ms": null
+      },
+      {
+        "seq": 16,
+        "step": "CONTRIBUTION_PRODUCED",
+        "agent": "agent.knowledge.generation",
+        "label": "知识生成产物未通过发布门，正文已隐藏",
+        "to": "",
+        "detail": "知识生成产物未通过发布门，正文已隐藏",
+        "elapsed_ms": null
+      },
+      {
+        "seq": 20,
+        "step": "CONTRIBUTION_PRODUCED",
+        "agent": "agent.quality.review",
+        "label": "不可用、澄清或空回答，未执行真实审核",
+        "to": "",
+        "detail": "不可用、澄清或空回答，未执行真实审核",
+        "elapsed_ms": null
+      },
+      {
+        "seq": 25,
+        "step": "CONTRIBUTION_PRODUCED",
+        "agent": "agent.guidance.decision",
+        "label": "PARTIAL_ANSWER: verdict=skipped; accepted=0, rejected=0, uncertain=1",
+        "to": "",
+        "detail": "PARTIAL_ANSWER: verdict=skipped; accepted=0, rejected=0, uncertain=1",
+        "elapsed_ms": null
+      },
+      {
+        "seq": 26,
+        "step": "GUIDANCE_DECIDED",
+        "agent": "agent.guidance.decision",
+        "label": "PARTIAL_ANSWER: 补充缺失证据与适用条件",
+        "to": "",
+        "detail": "PARTIAL_ANSWER: 补充缺失证据与适用条件",
+        "elapsed_ms": null
+      }
+    ],
+    "question_type": "",
+    "clarify": null,
+    "answer": ""
+  }
+}

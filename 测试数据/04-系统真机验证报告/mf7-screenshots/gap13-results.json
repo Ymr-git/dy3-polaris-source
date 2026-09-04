@@ -1,0 +1,42 @@
+[
+  {
+    "name": "L1 用户会话 sess- 前缀",
+    "pass": true,
+    "note": "sess-0cd2dd7a5ed"
+  },
+  {
+    "name": "答疑返回 L1 会话 (唯一入口)",
+    "pass": true,
+    "note": "统一=sess-0cd2dd7a5ed exec=1"
+  },
+  {
+    "name": "L5 执行会话 ag- 前缀 + 关联 L1",
+    "pass": true,
+    "note": "ag-53a84449c70 ← sess-0cd2dd7a5"
+  },
+  {
+    "name": "响应头 X-Trace-Id",
+    "pass": true,
+    "note": "tr-900274e4a280"
+  },
+  {
+    "name": "错误体回填 trace_id",
+    "pass": true,
+    "note": "code=-32310 trace=tr-7b5b91244e18"
+  },
+  {
+    "name": "trace_id 透传",
+    "pass": true,
+    "note": "tr-custom123456"
+  },
+  {
+    "name": "L7 响应带 X-Trace-Id 头",
+    "pass": true,
+    "note": "status=404 trace=tr-17f17d51374c"
+  },
+  {
+    "name": "会话列表含 L1 会话",
+    "pass": true,
+    "note": "sess- 前缀展示"
+  }
+]

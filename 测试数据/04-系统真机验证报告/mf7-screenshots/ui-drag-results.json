@@ -1,0 +1,67 @@
+[
+  {
+    "name": "导航去除 kb-search",
+    "pass": true,
+    "note": "['practice', 'overview', 'overview-recs', 'overview-monitor', 'learn', 'learn-mastery', 'learn-weak', 'learn-path', 'que"
+  },
+  {
+    "name": "学习轨迹入口",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "历史记录入口",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "chips 移到底部(输入框下)",
+    "pass": true,
+    "note": "{'mf7Msgs': 294.59375, 'mf7InputRow': 717.609375, 'mf7Chips': 768.40625, 'mf7Resize': 789}"
+  },
+  {
+    "name": "chips 小字体",
+    "pass": true,
+    "note": "11px"
+  },
+  {
+    "name": "chips 横向滚动",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "面板可拖动",
+    "pass": true,
+    "note": "{'x': 1018, 'y': 248} -> {'x': 1384, 'y': 360}"
+  },
+  {
+    "name": "面板可缩放",
+    "pass": true,
+    "note": "400x560 -> 528x668"
+  },
+  {
+    "name": "拖至边缘自动贴边停靠",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "点击停靠条恢复",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "助手跳转学习轨迹",
+    "pass": true,
+    "note": "learn-path"
+  },
+  {
+    "name": "助手跳转历史记录",
+    "pass": true,
+    "note": "query-history"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

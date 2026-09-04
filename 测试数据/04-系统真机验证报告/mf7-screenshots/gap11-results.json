@@ -1,0 +1,37 @@
+[
+  {
+    "name": "PUT mastery 乐观锁成功",
+    "pass": true,
+    "note": "v164->165"
+  },
+  {
+    "name": "PUT mastery 陈旧版本 409",
+    "pass": true,
+    "note": "code=409 current=165"
+  },
+  {
+    "name": "L4 next-action 三语义统一",
+    "pass": true,
+    "note": "action=practice conf=0.68 steps=5"
+  },
+  {
+    "name": "L5 path_simulation 委托 L4",
+    "pass": true,
+    "note": "source=l4.next_action"
+  },
+  {
+    "name": "答疑返回 L1 会话",
+    "pass": true,
+    "note": "统一=sess-314e87096e6 exec=1"
+  },
+  {
+    "name": "今日推荐走 L4 策略决策",
+    "pass": true,
+    "note": "L4 语义展示"
+  },
+  {
+    "name": "答疑统一会话入口",
+    "pass": true,
+    "note": "L1 会话"
+  }
+]

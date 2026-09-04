@@ -1,0 +1,32 @@
+[
+  {
+    "name": "动态练习: 每测新题",
+    "pass": true,
+    "note": "r1={'stem': '补全填空：Dy³⁺ 单掺杂荧光粉可实现 ____', 'hasBlank': True, 'opts': 0, 'opt0': ''} r2={'stem': '请判断以下说法是否正确：Dy³⁺ 单掺杂可实现单基质白光发射', 'hasBlank': False, 'opts': 2, 'opt0': 'A. 正确'}"
+  },
+  {
+    "name": "助手面板 + 快捷指令",
+    "pass": true,
+    "note": "chips=10 msgs=2"
+  },
+  {
+    "name": "助手答疑调度 4 Agent",
+    "pass": true,
+    "note": "答疑结果\n针对“Dy3+的浓度猝灭机理是什么？”，经迭代综合 2 条知识得出：\n\n浓度猝灭是稀土发光材料的核心问题：随 Dy3+ 掺杂浓度升高，离子间距缩短，交叉弛豫（cross-relaxation）与非辐射跃迁增强，发光强度先升后降。在"
+  },
+  {
+    "name": "助手知识查询",
+    "pass": true,
+    "note": "知识库检索：一下 量子效率 的\n知识条目\n荧光粉表征手段：XRD 用于物相鉴定与结晶度分析，谢乐公式 D=Kλ/(βcosθ) 估算晶粒尺寸；PL 光谱仪测量发射光谱与激发光谱，使用氙灯激发源；量子效率用积分球测量，绝对量子效率等于发射光子"
+  },
+  {
+    "name": "助手快捷跳转(今日推荐)",
+    "pass": true,
+    "note": "view=overview-recs"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "首页加载",
+    "pass": true,
+    "note": "http://127.0.0.1:8000/"
+  },
+  {
+    "name": "UI 登录",
+    "pass": false,
+    "note": "Page.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#loginSt"
+  },
+  {
+    "name": "答疑返回内容",
+    "pass": true,
+    "note": "答案（置信度 0.4673 · 审核 - · 统一会话 ag-35a8569c723）\n针对“Dy3+ 发光机理是什么？”，综合 2 条相关知识，解答如下：\n- Dy3+ 的发光源于 4F9/2 激发态向 6HJ 基态的多重跃迁，产生蓝（4..."
+  },
+  {
+    "name": "学情页内容",
+    "pass": true,
+    "note": "学情总览\n66%\n总体掌握度\n能力值 θ\n0\n学习等级\nintermediate\n画像置信度\n67%\n四域掌握度\n能级跃迁理论\n65%\n材料体系设计\n64%\n合成制备工艺\n67%\n表征测试技术\n67%"
+  },
+  {
+    "name": "概览页内容",
+    "pass": true,
+    "note": "掌握度面板\n理论 65\n应用 64\n合成 67\n表征 67\n66\n总体掌握度\n总体掌握度\n66 / 100\n能力值 θ\n0\n学习等级\nintermediate\n画像置信度\n67%\n学习数据状态\nDY20240001\n画像用户\n42 / 42"
+  },
+  {
+    "name": "无 console 错误",
+    "pass": false,
+    "note": "PAGEERROR: Cannot read properties of undefined (reading 'catch'); Failed to load resource: the server responded with a status of 401 (Unauthorized); Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  },
+  {
+    "name": "无失败请求",
+    "pass": true,
+    "note": "clean"
+  }
+]

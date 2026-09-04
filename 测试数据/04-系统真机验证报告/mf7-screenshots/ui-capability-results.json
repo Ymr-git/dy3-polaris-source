@@ -1,0 +1,32 @@
+[
+  {
+    "name": "学习轨迹推荐链路",
+    "pass": false,
+    "note": "学习轨迹\n基于当前画像，L4 策略引擎推荐的学习链路如下（按执行顺序）。"
+  },
+  {
+    "name": "今日推荐策略",
+    "pass": false,
+    "note": "今日推荐（策略生成）\n\n暂无策略（未完成初测请先练习）"
+  },
+  {
+    "name": "知识库搜索",
+    "pass": false,
+    "note": ""
+  },
+  {
+    "name": "答疑 dy离子",
+    "pass": true,
+    "note": "答案（置信度 0.45 · 审核 needs_review · 统一会话 sess-33f8afe86）\n针对“dy离子是什么”，经迭代综合 1 条知识得出：\n\nDy3+（镝离子）的电子组态为 [Xe]4f9。4f 电子受外层 5s2 5p6 电子屏蔽，使其发"
+  },
+  {
+    "name": "Agent 执行轨迹非空",
+    "pass": true,
+    "note": "Agent 运行监控\n系统健康 (探活)\nL0\n✅\nL1\n✅\nL2\n✅\nL3\n✅\nL4\n✅\nL5\n✅\nL6\n✅\nL7\n✅\n最近 Agent 执行轨迹 (30)\n时间\t操作者\t结果\t动作\t目标资源\t详情\n178609450"
+  },
+  {
+    "name": "无前端 JS 错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

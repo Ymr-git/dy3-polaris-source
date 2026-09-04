@@ -1,0 +1,3 @@
+双击 `dy3-polaris-source\一键启动.bat`。
+   - 首次运行会自动安装依赖（需联网，走清华 PyPI 镜像），随后自动打开 `http://localhost:8000/`。
+   - 也可手动：进入 `dy3-polaris-source`，执行 `pip install -e ".[dev]"`，再 `python -m dy3_polaris.main --port 8000`。

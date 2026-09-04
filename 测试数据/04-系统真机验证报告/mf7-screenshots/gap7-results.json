@@ -1,0 +1,42 @@
+[
+  {
+    "name": "诊断完成",
+    "pass": true,
+    "note": "weak=16"
+  },
+  {
+    "name": "练习模式出题",
+    "pass": true,
+    "note": "count=4"
+  },
+  {
+    "name": "考核模式出题",
+    "pass": true,
+    "note": "count=2"
+  },
+  {
+    "name": "考核判题+画像写回",
+    "pass": true,
+    "note": "score=1/2 avg=0.6468"
+  },
+  {
+    "name": "画像含决策/考核/审核日志",
+    "pass": true,
+    "note": "keys=['assess_log', 'decision_log', 'review_log']"
+  },
+  {
+    "name": "前端多向链路图",
+    "pass": true,
+    "note": "含逆向/跨界标注"
+  },
+  {
+    "name": "前端练习/考核按钮",
+    "pass": true,
+    "note": "buttons=2"
+  },
+  {
+    "name": "前端练习出题动态调用",
+    "pass": true,
+    "note": "含 questions=True"
+  }
+]

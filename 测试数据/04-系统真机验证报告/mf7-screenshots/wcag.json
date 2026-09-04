@@ -1,0 +1,22 @@
+{
+  "contrast": {
+    "total": 34,
+    "pass": 34,
+    "fail": 0,
+    "fail_details": []
+  },
+  "browser": {
+    "focusable_elements": 45,
+    "tab_moves": 8,
+    "aria": {
+      "role": 10,
+      "label": 11,
+      "modal": 2
+    },
+    "focus_visible_css": true,
+    "images": {
+      "total": 0,
+      "no_alt": 0
+    }
+  }
+}

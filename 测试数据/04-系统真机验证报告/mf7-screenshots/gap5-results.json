@@ -1,0 +1,42 @@
+[
+  {
+    "name": "练习入口注入",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "练习视图出题",
+    "pass": true,
+    "note": "options=4 文本='学习练习\\n第 1 / 5 题\\nA-05\\n\\nDy³⁺的红光跃迁对什么指标有贡献？\\n'"
+  },
+  {
+    "name": "作答反馈 + 掌握度变化",
+    "pass": true,
+    "note": "kp=A-05 before=0.892"
+  },
+  {
+    "name": "画像 BKT 联动",
+    "pass": true,
+    "note": "A-05: 0.892 -> 0.976"
+  },
+  {
+    "name": "薄弱点分析视图",
+    "pass": true,
+    "note": "行数=15"
+  },
+  {
+    "name": "今日推荐视图",
+    "pass": true,
+    "note": "卡片=5"
+  },
+  {
+    "name": "设置面板 + 学习数据状态",
+    "pass": true,
+    "note": "hidden=False 含Settings=True 含学习数据=True"
+  },
+  {
+    "name": "热力图真实数据渲染",
+    "pass": true,
+    "note": "平均掌握度=66%"
+  }
+]

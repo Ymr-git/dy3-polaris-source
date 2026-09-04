@@ -1,0 +1,37 @@
+[
+  {
+    "name": "dy离子归一化 → Dy3+ 特性",
+    "pass": true,
+    "note": "针对“dy离子是什么”，经迭代综合 5 条知识得出：\n\n浓度猝灭是稀土发光材料的核心问题：随 Dy3+ 掺杂浓度升高，离子间距缩短，交叉弛豫（cross-relaxation）与非辐射跃迁增强，发光强度先升后降。在 Ca7NaY(PO4)6"
+  },
+  {
+    "name": "范围外拒绝（红烧肉）",
+    "pass": true,
+    "note": "当前知识库暂无与「如何做红烧肉」直接相关的知识（最接近的知识与问题主题重叠度仅 0.00）。\n本系统知识库聚焦稀土发光材"
+  },
+  {
+    "name": "Agent 记忆写入画像",
+    "pass": true,
+    "note": "记忆 2 条 (含 dy离子/红烧肉)"
+  },
+  {
+    "name": "Agent 声誉评分",
+    "pass": true,
+    "note": "{\"agent.learning.diagnosis\": 79.6, \"agent.knowledge.generation\": 79.6, \"agent.quality.review\": 79.6,"
+  },
+  {
+    "name": "画像学习 query_log",
+    "pass": true,
+    "note": "query_log 2 条"
+  },
+  {
+    "name": "L4 自拉画像推荐路径",
+    "pass": true,
+    "note": "action=practice 路径 5 条: A-05:练习, D-05:考核, B-01:练习, A-06:考核"
+  },
+  {
+    "name": "Agent 执行轨迹审计",
+    "pass": true,
+    "note": "审计 2 条"
+  }
+]

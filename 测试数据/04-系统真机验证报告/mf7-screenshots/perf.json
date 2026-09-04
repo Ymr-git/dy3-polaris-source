@@ -1,0 +1,26 @@
+{
+  "first_load": {
+    "load_ms": 609.0,
+    "domContentLoaded": 104.59999990463257,
+    "loadEvent": 105.5,
+    "fcp": 424,
+    "lcp": null,
+    "cls": 0,
+    "resourceCount": 5
+  },
+  "api_latency": {
+    "login": 177.0,
+    "sessions": 16.0,
+    "entities": 0.0,
+    "gov_health": 0.0,
+    "audit_decisions": 15.0,
+    "review_stats": 16.0
+  },
+  "assets": {
+    "/static/assets/app.css": 14641,
+    "/static/assets/app.js": 33365,
+    "/static/assets/ws-client.js": 10085,
+    "/static/assets/mf6-features.js": 14091
+  },
+  "ws_roundtrip_ms": 9
+}

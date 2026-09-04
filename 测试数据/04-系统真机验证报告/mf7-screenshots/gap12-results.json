@@ -1,0 +1,42 @@
+[
+  {
+    "name": "kp-catalog 42 KP 单点",
+    "pass": true,
+    "note": "total=42"
+  },
+  {
+    "name": "kp-catalog 含名称/层级/kg_nodes",
+    "pass": true,
+    "note": "稀土离子的电子构型/L1"
+  },
+  {
+    "name": "练习判题成功",
+    "pass": true,
+    "note": "mastery=0.8364"
+  },
+  {
+    "name": "画像经完整管线重建",
+    "pass": true,
+    "note": "level=intermediate kp一致=True"
+  },
+  {
+    "name": "L6 path_simulation 委托 L4",
+    "pass": true,
+    "note": "source=l4.next_action steps=1"
+  },
+  {
+    "name": "反馈聚合统一枚举",
+    "pass": true,
+    "note": "types=['unknown']"
+  },
+  {
+    "name": "前端热力图渲染 (catalog 驱动)",
+    "pass": true,
+    "note": "42 KP 网格"
+  },
+  {
+    "name": "答疑应答正常",
+    "pass": true,
+    "note": "多智能体应答"
+  }
+]

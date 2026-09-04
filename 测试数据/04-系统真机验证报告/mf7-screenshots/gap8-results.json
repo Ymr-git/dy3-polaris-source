@@ -1,0 +1,42 @@
+[
+  {
+    "name": "技能动态调用(path_simulation)",
+    "pass": true,
+    "note": "path=5"
+  },
+  {
+    "name": "画像动态字段",
+    "pass": true,
+    "note": "overall=0.658 dims=4"
+  },
+  {
+    "name": "新用户默认0分",
+    "pass": true,
+    "note": "overall=0.0"
+  },
+  {
+    "name": "Agent inbox 收到广播",
+    "pass": true,
+    "note": "total=6"
+  },
+  {
+    "name": "学习者主页画像状态卡",
+    "pass": true,
+    "note": "含状态卡"
+  },
+  {
+    "name": "游戏属性面板(雷达图)",
+    "pass": true,
+    "note": "svg=1"
+  },
+  {
+    "name": "热力图含游戏面板+百分制",
+    "pass": true,
+    "note": "百分制"
+  },
+  {
+    "name": "Agent 列表含广播频道",
+    "pass": false,
+    "note": "频道徽章"
+  }
+]

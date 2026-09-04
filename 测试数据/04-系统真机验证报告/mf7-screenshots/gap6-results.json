@@ -1,0 +1,22 @@
+[
+  {
+    "name": "agents-list 动态加载 4 Agent",
+    "pass": true,
+    "note": "cards=4"
+  },
+  {
+    "name": "执行按钮动态调用 Agent",
+    "pass": true,
+    "note": "输出含 completed=True"
+  },
+  {
+    "name": "知识生成执行有答案",
+    "pass": true,
+    "note": "answer 存在=True"
+  },
+  {
+    "name": "agents-chain 链路图",
+    "pass": true,
+    "note": "含 4 个频道链路"
+  }
+]

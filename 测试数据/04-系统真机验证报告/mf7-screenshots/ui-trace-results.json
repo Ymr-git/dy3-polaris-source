@@ -1,0 +1,17 @@
+[
+  {
+    "name": "答疑结果就地展示 Agent 执行记录",
+    "pass": true,
+    "note": "可见 4/4: ['agent.learning.diagnosis', 'agent.knowledge.generation', 'agent.quality.review', 'agent.guidance.decision']"
+  },
+  {
+    "name": "轨迹时间可读",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "登录后答疑就地 4 条轨迹",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "答疑证据区展示",
+    "pass": true,
+    "note": ""
+  },
+  {
+    "name": "预设问题快捷按钮",
+    "pass": true,
+    "note": "count=5"
+  },
+  {
+    "name": "登录后监控轨迹可见",
+    "pass": true,
+    "note": "Agent 运行监控\n系统健康\n8/8\n全部正常\nl0 ✅\nl1 ✅\nl2 ✅\n"
+  },
+  {
+    "name": "助手出题数量生效(7道)",
+    "pass": true,
+    "note": "view=practice"
+  },
+  {
+    "name": "助手记忆状态回显",
+    "pass": true,
+    "note": "暂无记忆状态数据——完成学习练习后，BKT/FSRS 会为每个知识点记录遗忘曲线与复习队列。"
+  },
+  {
+    "name": "助手能力估计回显",
+    "pass": true,
+    "note": "能力估计（IRT）\n当前能力值 θ = 0.00（标准误 0.300）\n95% 置信区间 [-0.59, 0.59]\n能力曲线变化可在【学情"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "clean"
+  }
+]

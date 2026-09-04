@@ -1,0 +1,86 @@
+{
+  "generated_at": 1786516476.61834,
+  "personas": {
+    "P1高能力学霸": {
+      "theta": 1.7403,
+      "level": "advanced",
+      "learning_style": "reading",
+      "bloom_target": "evaluate",
+      "confidence": 0.7169,
+      "avg_mastery": 0.8297,
+      "n_weak": 0,
+      "weak_head": [],
+      "A_avg": 0.8345,
+      "D_avg": 0.8219
+    },
+    "P2低能力学渣": {
+      "theta": -1.7165,
+      "level": "beginner",
+      "learning_style": "reading",
+      "bloom_target": "understand",
+      "confidence": 0.7676,
+      "avg_mastery": 0.2957,
+      "n_weak": 36,
+      "weak_head": [
+        "A-01",
+        "A-03",
+        "A-04",
+        "A-05",
+        "A-06",
+        "A-07",
+        "A-08",
+        "A-09"
+      ],
+      "A_avg": 0.3565,
+      "D_avg": 0.2742
+    },
+    "P3偏科不一致": {
+      "theta": -0.1401,
+      "level": "intermediate",
+      "learning_style": "reading",
+      "bloom_target": "analyze",
+      "confidence": 0.7589,
+      "avg_mastery": 0.5705,
+      "n_weak": 16,
+      "weak_head": [
+        "B-07",
+        "C-01",
+        "C-02",
+        "C-03",
+        "C-05",
+        "C-08",
+        "C-09",
+        "C-10"
+      ],
+      "A_avg": 0.7605,
+      "D_avg": 0.2
+    },
+    "P4突变漂移": {
+      "theta": -0.376,
+      "level": "intermediate",
+      "learning_style": "reading",
+      "bloom_target": "analyze",
+      "confidence": 0.7898,
+      "avg_mastery": 0.5182,
+      "n_weak": 21,
+      "weak_head": [
+        "B-09",
+        "B-10",
+        "B-11",
+        "C-01",
+        "C-02",
+        "C-03",
+        "C-04",
+        "C-05"
+      ],
+      "A_avg": 0.8364,
+      "D_avg": 0.2
+    }
+  },
+  "issues": [],
+  "p4_drift": {
+    "drift_detected_any": true,
+    "drift_count_final": null,
+    "recommended_action_final": "trigger_retraining"
+  }
+}

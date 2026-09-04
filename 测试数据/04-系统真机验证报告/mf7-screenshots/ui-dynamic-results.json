@@ -1,0 +1,117 @@
+[
+  {
+    "name": "UI 表单登录",
+    "pass": true,
+    "note": "表单提交"
+  },
+  {
+    "name": "视图 overview",
+    "pass": true,
+    "note": "学习概览 | 0% | 总体掌握度 | - | 能力值 θ | novice | 学习等级 | 0 | 薄弱点 | Top KP 掌握度 | 建议前往「今日推荐」查看 L4 策略决策，或在「问答」与多智能体交互。"
+  },
+  {
+    "name": "视图 overview-recs",
+    "pass": true,
+    "note": "今日推荐（策略生成） |  | 暂无策略（未完成初测请先练习）"
+  },
+  {
+    "name": "视图 overview-monitor",
+    "pass": true,
+    "note": "Agent 运行监控 | 系统健康 (探活) | L0 | ✅ | L1 | ✅ | L2 | ✅ | L3 | ✅ | L4 | ✅ | L5 | ✅ | L6 | ✅ | L7 | ✅ | 最近 Agent 执行轨迹"
+  },
+  {
+    "name": "视图 learn",
+    "pass": true,
+    "note": "学情总览 | 0% | 总体掌握度 | 能力值 θ | - | 学习等级 | beginner | 画像置信度 | 0% | 四域掌握度 | 能级跃迁理论 | 0% | 材料体系设计 | 0% | 合成制备工艺 | 0%"
+  },
+  {
+    "name": "视图 learn-mastery",
+    "pass": true,
+    "note": "KP 掌握度 (0)"
+  },
+  {
+    "name": "视图 learn-weak",
+    "pass": true,
+    "note": "薄弱点分析 | 按掌握度升序排列，建议优先复习顶部项。 | KP\t名称\t掌握度\t状态 | 当前无薄弱点"
+  },
+  {
+    "name": "视图 learn-path",
+    "pass": true,
+    "note": "学习轨迹 | 基于当前画像，L4 策略引擎推荐的学习链路如下（按执行顺序）。"
+  },
+  {
+    "name": "视图 query",
+    "pass": true,
+    "note": "实时答疑 |  | 输入问题，由学情诊断 → 知识生成 → 审核校验 → 导学决策 多智能体按需协作应答。本次答疑记录将归入您的统一会话（可到「会话管理」查看）。 |  | 提问 | 统一会话: sess-0f8e29d"
+  },
+  {
+    "name": "视图 query-history",
+    "pass": false,
+    "note": "会话管理 |  | 统一会话：实时答疑的提问会自动归入「实时答疑」类型会话，并关联 Agent 执行记录。 |  | +新建会话 | ID\t类型\t状态\t提问数\tAgent 执行\t创建时间\t操作 | sess-0f8e29"
+  },
+  {
+    "name": "视图 kb",
+    "pass": true,
+    "note": "知识库管理 | 37 | 实体总数 | 3 | 图谱规则 | 0 | 三元组 | 0 | 质检平均分 | 实体列表 (37) | ID\t名称\t类型\t领域\t状态\t创建时间 | \tNaGdF4:Eu3+ 纳米晶\t\tA\tact"
+  },
+  {
+    "name": "视图 kb-graph",
+    "pass": true,
+    "note": "关系图谱 | 0 | 实体数 | 0 | 三元组 | 3 | 规则数 | 最近三元组 (30) | 主体\t预测\t客体 | 暂无三元组记录"
+  },
+  {
+    "name": "视图 kb-search",
+    "pass": true,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 gov-audit",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 gov-review",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 gov-policy",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 gov-report",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 agents-list",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 agents-chain",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 agents-audit",
+    "pass": false,
+    "note": "搜索 | 搜索"
+  },
+  {
+    "name": "视图 settings",
+    "pass": false,
+    "note": ""
+  },
+  {
+    "name": "答疑 Agent 运行结果",
+    "pass": false,
+    "note": "Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#queryAsk\")\n    -"
+  },
+  {
+    "name": "无 JS 运行时错误",
+    "pass": true,
+    "note": "WebSocket connection to 'ws://127.0.0.1:8000/ws/stream?token=PLACEHOLDER' failed: Error during WebSocket handshake: Unexpected response code: 403; WebSocket connection to 'ws://127.0.0.1:8000/ws/broadcast?token=PLACEHOLDER' failed: Error during WebSocket handshake: Unexpected response code: 403; Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+]
