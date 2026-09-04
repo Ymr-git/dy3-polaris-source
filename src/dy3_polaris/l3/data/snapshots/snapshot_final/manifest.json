@@ -1,0 +1,35 @@
+{
+  "format_version": "1.0",
+  "created_at": 1788451542.7600174,
+  "created_at_iso": "2026-09-04T00:05:42",
+  "counts": {
+    "entities": 9286,
+    "triples": 2882,
+    "chunks": 3376,
+    "versions": 3404,
+    "conflicts": 0,
+    "evidence": 0
+  },
+  "checksums": {
+    "entities.jsonl": "deaab48c692196de3492f3b7fabf6927e47998b9bd254218328afb6a24d347e8",
+    "triples.jsonl": "6d783b0aaa371dc34abf3fb24715297b9c0d73753ac63ac878f5be175344a494",
+    "versions.jsonl": "12305d4ed7a25a534e03841ea139a97e4a2a0b70316fdd73a4cb235c24995f93"
+  },
+  "stats": {
+    "total_entities": 9286,
+    "total_chunks": 3376,
+    "total_triples": 2882,
+    "total_sources": 0,
+    "chunks_by_modality": {
+      "text": 3376
+    },
+    "avg_quality": 0.0,
+    "indexed_vectors": 3376,
+    "total_chars": 5136771,
+    "corpora": {
+      "papers": 2992,
+      "textbook": 384
+    }
+  },
+  "manifest_checksum": "def2e8d55fdf3ce249550d9299e1c29d739da706beaced011f1ca89fae6a78d5"
+}
